@@ -1,0 +1,7 @@
+project = certifiable-quant-tests
+
+using version
+using config
+using test
+using install
+using dist
