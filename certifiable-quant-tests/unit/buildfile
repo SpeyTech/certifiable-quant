@@ -1,0 +1,28 @@
+import cq = certifiable-quant%liba{certifiable-quant}
+
+tests = exe{ \
+  certifiable_quant_test_analyze \
+  certifiable_quant_test_bit_identity \
+  certifiable_quant_test_calibrate \
+  certifiable_quant_test_certificate \
+  certifiable_quant_test_convert \
+  certifiable_quant_test_primitives \
+  certifiable_quant_test_verify \
+  }
+
+exe{certifiable_quant_test_analyze}: c{test_analyze} $cq
+exe{certifiable_quant_test_bit_identity}: c{test_bit_identity} $cq
+exe{certifiable_quant_test_calibrate}: c{test_calibrate} $cq
+exe{certifiable_quant_test_certificate}: c{test_certificate} $cq
+exe{certifiable_quant_test_convert}: c{test_convert} $cq
+exe{certifiable_quant_test_primitives}: c{test_primitives} $cq
+exe{certifiable_quant_test_verify}: c{test_verify} $cq
+
+$tests:
+{
+  c.coptions += -UNDEBUG
+  c.libs += -lm
+  test = true
+}
+
+./: $tests

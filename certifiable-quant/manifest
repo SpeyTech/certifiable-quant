@@ -1,0 +1,17 @@
+: 1
+name: certifiable-quant
+version: 0.1.0-a.0.z
+type: lib,binless
+language: c
+summary: Certifiable inference engine with deterministic behavior
+license: AGPL-3.0-or-later
+description-file: README.md
+url: https://github.com/SpeyTech/certifiable-quant
+package-url: https://github.com/SpeyTech/certifiable-quant/certifiable-quant
+build-error-email: william@fstopify.com
+builds: default
+builds: -windows
+builds: -binddist
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0
+tests: certifiable-quant-tests == $

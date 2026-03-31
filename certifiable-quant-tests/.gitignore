@@ -1,0 +1,45 @@
+# Build artifacts
+/build-*/
+/build_*/
+/build/bootstrap/
+.bdep/
+.bpkg/
+
+# Local default options files.
+#
+.build2/local/
+
+# Compiler/linker output.
+#
+*.d
+*.t
+*.i
+*.i.*
+*.ii
+*.ii.*
+*.o
+*.obj
+*.gcm
+*.pcm
+*.ifc
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.exe
+*.exe.dlls/
+*.exe.manifest
+*.pc
+
+# Build2 symlinks exes from build dir to src dir for convenient
+/unit/certifiable_quant_test_analyze
+/unit/certifiable_quant_test_bit_identity
+/unit/certifiable_quant_test_calibrate
+/unit/certifiable_quant_test_certificate
+/unit/certifiable_quant_test_convert
+/unit/certifiable_quant_test_primitives
+/unit/certifiable_quant_test_verify
